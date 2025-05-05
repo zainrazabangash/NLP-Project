@@ -1,0 +1,9 @@
+markovify
+nltk
+newsapi-python
+praw
+pytrends
+datasets
+TTS
+gradio
+python-dotenv
