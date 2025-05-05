@@ -6,6 +6,7 @@ venv/
 
 # Ignore environment variables file
 .env
+config.env
 
 # Ignore Jupyter Notebook checkpoints
 .ipynb_checkpoints/
@@ -18,3 +19,4 @@ datasets/
 
 # Ignore specific files
 newsapirough.text
+fairy_tales.txt
