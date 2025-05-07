@@ -20,3 +20,5 @@ datasets/
 # Ignore specific files
 newsapirough.text
 fairy_tales.txt
+result.json
+trend_story.wav
