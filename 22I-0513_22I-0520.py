@@ -8,7 +8,7 @@ import webbrowser
 import re
 
 def run_notebook(notebook_path):
-    # Read the notebook
+
     with open(notebook_path, 'r', encoding='utf-8') as f:
         nb = nbformat.read(f, as_version=4)
     
@@ -20,7 +20,6 @@ def run_notebook(notebook_path):
     kc.wait_for_ready()
     
     try:
-        # Execute each cell one by one
         for i, cell in enumerate(nb.cells):
             if cell.cell_type != 'code':
                 continue
@@ -28,16 +27,13 @@ def run_notebook(notebook_path):
             try:
                 print(f"Executing cell {i+1}...")
                 
-                # Execute the cell
                 msg_id = kc.execute(cell.source)
                 
-                # Wait for the execution to complete
                 while True:
                     msg = kc.get_shell_msg()
                     if msg['parent_header']['msg_id'] == msg_id:
                         break
                 
-                # Get the output
                 while True:
                     msg = kc.get_iopub_msg()
                     if msg['parent_header']['msg_id'] == msg_id:
@@ -46,8 +42,7 @@ def run_notebook(notebook_path):
                         if msg['header']['msg_type'] == 'stream':
                             output_text = msg['content']['text']
                             print(output_text)
-                            # Look for localhost URL in the output
-                            localhost_match = re.search(r'http://localhost:\d+', output_text)
+                            localhost_match = re.search(r'http://127.0.0.1:\d+', output_text)
                             if localhost_match:
                                 url = localhost_match.group(0)
                                 print(f"\nOpening {url} in your default browser...")
@@ -57,10 +52,8 @@ def run_notebook(notebook_path):
                 
                 print(f"Cell {i+1} executed successfully!")
                 
-                # Wait a bit between cells
                 time.sleep(2)
                 
-                # If this is the last cell (interface), wait for it to be ready
                 if i == len(nb.cells) - 1:
                     print("Interface is ready!")
                     print("Press Ctrl+C to stop the script when you're done with the interface.")
@@ -77,7 +70,6 @@ def run_notebook(notebook_path):
                 raise e
                 
     finally:
-        # Clean up
         kc.stop_channels()
         km.shutdown_kernel()
 
