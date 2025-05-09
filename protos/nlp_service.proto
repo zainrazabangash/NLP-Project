@@ -1,0 +1,91 @@
+syntax = "proto3";
+
+package nlp;
+
+// The NLP service definition
+service NLPService {
+  // Generate text using Markov model
+  rpc GenerateText (TextGenerationRequest) returns (TextResponse) {}
+  
+  // Get trending topics
+  rpc GetTrendingTopics (TrendingRequest) returns (TrendingResponse) {}
+  
+  // Generate story from prompt
+  rpc GenerateStory (StoryRequest) returns (StoryResponse) {}
+  
+  // Text to Speech conversion
+  rpc TextToSpeech (TTSRequest) returns (TTSResponse) {}
+  
+  // Stream processing updates
+  rpc StreamProcessing (ProcessingRequest) returns (stream ProcessingUpdate) {}
+}
+
+// Text generation request
+message TextGenerationRequest {
+  string prompt = 1;
+  int32 max_length = 2;
+  bool try_hard = 3;
+}
+
+// Trending topics request
+message TrendingRequest {
+  string country = 1;
+  string time_range = 2;  // e.g., "now 1-d", "now 7-d"
+}
+
+// Story generation request
+message StoryRequest {
+  string prompt = 1;
+  int32 max_length = 2;
+  string style = 3;  // e.g., "fairy_tale", "modern", "scifi"
+}
+
+// Text to Speech request
+message TTSRequest {
+  string text = 1;
+  string voice = 2;  // e.g., "male", "female"
+  float speed = 3;
+}
+
+// Processing request
+message ProcessingRequest {
+  string text = 1;
+  string processing_type = 2;  // e.g., "markov", "trending", "story", "tts"
+}
+
+// Text response
+message TextResponse {
+  string generated_text = 1;
+  float confidence = 2;
+  map<string, string> metadata = 3;
+}
+
+// Trending response
+message TrendingResponse {
+  repeated string topics = 1;
+  map<string, float> scores = 2;
+  string timestamp = 3;
+}
+
+// Story response
+message StoryResponse {
+  string story = 1;
+  string prompt = 2;
+  float coherence_score = 3;
+  map<string, string> metadata = 4;
+}
+
+// TTS response
+message TTSResponse {
+  bytes audio_data = 1;
+  string format = 2;  // e.g., "wav", "mp3"
+  int32 sample_rate = 3;
+}
+
+// Processing update
+message ProcessingUpdate {
+  string status = 1;
+  float progress = 2;
+  string intermediate_result = 3;
+  map<string, string> metadata = 4;
+} 
