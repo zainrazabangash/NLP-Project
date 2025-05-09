@@ -1,6 +1,10 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
 # Environment variables
-.env
 config.env
+*.env
 
 # Project specific directories
 .gradio/
@@ -13,6 +17,19 @@ newsapirough.text
 fairy_tales.txt
 result.json
 trend_story.wav
+test_audio.wav
 *.wav
 *.mp3
-*.json
+
+# Generated gRPC files
+*_pb2.py
+*_pb2_grpc.py
+*_pb2.pyi
+*_pb2_grpc.pyi
+*.pyi
+protos/*_pb2.py
+protos/*_pb2_grpc.py
+
+# Logs
+*.log
+logs/
