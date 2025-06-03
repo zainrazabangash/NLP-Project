@@ -3,9 +3,7 @@
 **Offline trend-driven story generator**  
 Fetch real-time trends (NewsAPI, Reddit, Google Trends), stitch them into short narratives with a local Markov chain trained on multiple corpora, then render them to speech—all inside a Jupyter Notebook and Docker container.
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/zainrazabangash/NLP-Project.git)
 [![Python](https://img.shields.io/badge/Python-3.11-blue)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green)](https://github.com/zainrazabangash/NLP-Project/blob/main/LICENSE)
 [![Docker](https://img.shields.io/badge/Docker-Supported-blue)](https://www.docker.com/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Supported-orange)](https://jupyter.org/)
 [![Gradio](https://img.shields.io/badge/Gradio-UI-purple)](https://gradio.app/)
