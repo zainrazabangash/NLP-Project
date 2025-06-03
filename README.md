@@ -3,6 +3,8 @@
 **Offline trend-driven story generator**  
 Fetch real-time trends (NewsAPI, Reddit, Google Trends), stitch them into short narratives with a local Markov chain trained on multiple corpora, then render them to speech—all inside a Jupyter Notebook and Docker container.
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/zainrazabangash/NLP-Project.git)
+
 ---
 
 ### 📊 Trend Analysis
@@ -50,8 +52,8 @@ Fetch real-time trends (NewsAPI, Reddit, Google Trends), stitch them into short 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/TrendStory.git
-cd TrendStory
+git clone https://github.com/zainrazabangash/NLP-Project.git
+cd NLP-Project
 ```
 
 2. Install dependencies:
@@ -97,3 +99,20 @@ python client.py
 - Kaggle Writing Prompts dataset
 - Coqui TTS for the text-to-speech model
 
+## 📫 Contact & Support
+
+### Questions & Issues
+- Open an [issue](https://github.com/zainrazabangash/NLP-Project/issues) on GitHub
+- Check the [existing issues](https://github.com/zainrazabangash/NLP-Project/issues) for similar problems
+
+### Contributing
+1. Fork the [repository](https://github.com/zainrazabangash/NLP-Project)
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+### Connect
+- Star the [repository](https://github.com/zainrazabangash/NLP-Project) if you find it useful
+- Watch the repository for updates
+- Share with others who might find it helpful
