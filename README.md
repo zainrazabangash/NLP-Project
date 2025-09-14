@@ -10,13 +10,13 @@ Fetch real-time trends (NewsAPI, Reddit, Google Trends), stitch them into short 
 
 ---
 
-### 📊 Trend Analysis
+### Trend Analysis
 - **Multiple Data Sources**
   - NewsAPI integration for real-time news headlines
   - Reddit API for trending discussions and topics
   - Google Trends data for popular search queries
 
-### 📚 Story Generation
+### Story Generation
 - **Rich Training Data**
   - Grimm's Fairy Tales (Project Gutenberg)  
   - Kaggle Writing Prompts  
@@ -28,13 +28,13 @@ Fetch real-time trends (NewsAPI, Reddit, Google Trends), stitch them into short 
   - `state_size=2` Markovify chains  
   - Optional topic-biased submodel for trend relevance
 
-### 🔊 Audio Output
+### Audio Output
 - **High-Quality Text-to-Speech**
   - Coqui TTS integration
   - "ljspeech/tacotron2-DDC" model
   - Natural-sounding voice synthesis
 
-### 💻 User Interface
+### User Interface
 - **Interactive Development**
   - Jupyter Notebook integration
   - Real-time code execution
@@ -42,7 +42,7 @@ Fetch real-time trends (NewsAPI, Reddit, Google Trends), stitch them into short 
   - Gradio-based user interface
   - Real-time story generation
 
-### 🐳 Deployment
+### Deployment
 - **Containerized Solution**
   - Docker support with Python 3.11
   - Jupyter server on port 8888
@@ -51,7 +51,7 @@ Fetch real-time trends (NewsAPI, Reddit, Google Trends), stitch them into short 
   - Simple pip installation
   - Environment variable configuration
 
-## 🛠️ Setup
+## Setup
 
 1. Clone the repository:
 ```bash
@@ -74,7 +74,7 @@ docker build -t trendstory .
 docker run -p 8888:8888 -p 7860:7860 trendstory
 ```
 
-## 📝 Usage
+## Usage
 
 1. Start the server:
 ```bash
@@ -88,7 +88,7 @@ python client.py
 
 3. Access the Gradio UI at `http://localhost:7860`
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - [ ] Replace Markovify model with a fine-tuned language model for better story coherence and creativity
 - [ ] Implement better trend analysis and topic clustering
@@ -96,13 +96,19 @@ python client.py
 - [ ] Improve story structure and narrative flow
 - [ ] Add support for multiple languages
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Project Gutenberg for the fairy tales corpus
 - Kaggle Writing Prompts dataset
 - Coqui TTS for the text-to-speech model
 
-## 📫 Contact & Support
+## Developer
+
+**Muhammad Zain Raza**, student of BS AI at FAST NUCES Islamabad
+
+For questions or suggestions, please contact me on my email: muhzainraza@gmail.com
+
+## Contact & Support
 
 ### Questions & Issues
 - Open an [issue](https://github.com/zainrazabangash/NLP-Project/issues) on GitHub
